@@ -117,7 +117,7 @@ st.text("loaded model")
 model.eval()
 
 uploaded_file = st.file_uploader("Choose a file")
-base_tick = st.number_input("Base tick")
+base_tick = st.number_input("Base tick", step=1)
 
 if (st.button('Submit')):
     fn = './' + randomword(20) + '.mid'
