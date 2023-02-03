@@ -118,8 +118,8 @@ model.eval()
 
 uploaded_file = st.file_uploader("Choose a file")
 base_tick = st.number_input("Base tick")
-
-if (uploaded_file is not None) and (base_tick != 0):
+st.button("submit", onclick=main(uploaded_file, base_tick))
+def main(uploaded_file , base_tick):
     fn = './' + randomword(20) + '.mid'
     f = open(fn, 'wb')
     f.write(uploaded_file.getvalue())
